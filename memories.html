@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Choose a Memory</title>
+
+<!-- SAME FONTS AS INDEX PAGE -->
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+background:#fdfaf6;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+font-family:'Inter',sans-serif;
+padding:20px;
+box-sizing:border-box;
+}
+
+/* container */
+
+.container{
+width:380px;
+max-width:100%;
+text-align:center;
+}
+
+/* title (same font as index hero title) */
+
+h1{
+font-family:'Playfair Display',serif;
+font-size:34px;
+margin-bottom:8px;
+color:#2d2d2d;
+}
+
+/* subtitle */
+
+.subtitle{
+color:#8c8c8c;
+font-size:14px;
+margin-bottom:35px;
+}
+
+/* grid */
+
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:18px;
+}
+
+/* cards */
+
+.card{
+background:white;
+padding:30px 10px;
+border-radius:18px;
+text-decoration:none;
+color:#333;
+box-shadow:0 8px 20px rgba(0,0,0,0.05);
+transition: all 0.25s ease;
+}
+
+/* hover animation */
+
+.card:hover{
+transform: translateY(-6px) scale(1.03);
+box-shadow:0 15px 30px rgba(0,0,0,0.12);
+}
+
+/* icons */
+
+.icon{
+font-size:32px;
+margin-bottom:10px;
+color:#d97a5d;
+}
+
+.card p{
+font-size:13px;
+letter-spacing:1px;
+margin:0;
+}
+
+/* back button */
+
+.back{
+display:block;
+margin-top:40px;
+font-size:13px;
+color:#777;
+text-decoration:none;
+}
+
+/* tablet */
+
+@media (max-width:768px){
+
+.container{
+width:100%;
+}
+
+}
+
+/* small phones */
+
+@media (max-width:480px){
+
+h1{
+font-size:28px;
+}
+
+.subtitle{
+font-size:13px;
+}
+
+.card{
+padding:24px 8px;
+}
+
+.icon{
+font-size:28px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Choose a Memory</h1>
+<p class="subtitle">Each chapter holds something special.</p>
+
+<div class="grid">
+
+<a href="family.html" class="card">
+<div class="icon">👨‍👩‍👧</div>
+<p>FAMILY ❤️</p>
+</a>
+
+<a href="love.html" class="card">
+<div class="icon">😁</div>
+<p>Manakendhuk bro 💕</p>
+</a>
+
+<a href="school.html" class="card">
+<div class="icon">🏫</div>
+<p>SCHOOL 🏫</p>
+</a>
+
+<a href="college.html" class="card">
+<div class="icon">🎓</div>
+<p>COLLEGE 🎓</p>
+</a>
+
+</div>
+
+<a href="index.html" class="back">← Back to the start</a>
+
+</div>
+
+</body>
+</html>

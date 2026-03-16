@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>School Friends</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f3f1ef;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            text-align: center;
+            width: 420px;
+            animation: fadePage 1s ease;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            margin-bottom: 8px;
+            color: #3e3a39;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: #8c8c8c;
+            margin-bottom: 35px;
+        }
+
+        .friend {
+
+            display: block;
+            text-decoration: none;
+            padding: 14px 20px;
+            margin: 12px 0;
+            border-radius: 40px;
+            border: 1px solid #e3e1df;
+            background: white;
+            text-align: center;
+            font-size: 15px;
+            color: #444;
+            transition: all .35s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+        }
+
+        .friend:hover {
+            background: #4b4341;
+            color: white;
+            transform: scale(1.03);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+        }
+
+        /* animations */
+
+        @keyframes fadePage {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            background: #4b4341;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 14px;
+            transition: all .3s ease;
+        }
+
+        .back-btn:hover {
+            background: #2f2a28;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>School Friends 🏫</h1>
+
+        <p class="subtitle">
+            Tap a name to see your memories together.
+        </p>
+
+        <a class="friend" href="school/hima.html">Hima</a>
+        <a class="friend" href="school/manoj.html">Manu</a>
+        <a class="friend" href="school/raghu.html">Raghu</a>
+        <a class="friend" href="school/rani.html">Rani</a>
+        <a class="back-btn" href="memories.html">← Back to Memories</a>
+    </div>
+
+</body>
+
+</html>

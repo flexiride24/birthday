@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Memories with Emily</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#fdfaf6;
+font-family:'Inter',sans-serif;
+text-align:center;
+padding:40px;
+animation:fadePage 1s ease;
+}
+
+h1{
+font-family:'Playfair Display',serif;
+font-size:40px;
+color:#3e3a39;
+margin-bottom:10px;
+}
+
+.subtitle{
+color:#7a7a7a;
+margin-bottom:30px;
+}
+
+.gallery{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.gallery img{
+width:250px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:transform .4s ease, box-shadow .4s ease;
+}
+
+.gallery img:hover{
+transform:scale(1.08);
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.back{
+display:inline-block;
+margin-top:40px;
+padding:10px 22px;
+background:#4b4341;
+color:white;
+text-decoration:none;
+border-radius:25px;
+transition:0.3s;
+}
+
+.back:hover{
+background:#2f2a28;
+transform:scale(1.05);
+}
+
+/* animations */
+
+@keyframes fadePage{
+from{
+opacity:0;
+transform:translateY(25px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Emily 💫</h1>
+
+<p class="subtitle">Some beautiful memories from our school days.</p>
+
+<div class="gallery">
+
+<img src="photo1.jpg">
+<img src="photo2.jpg">
+<img src="photo3.jpg">
+
+</div>
+
+<a class="back" href="school.html">← Back to Friends</a>
+
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Family Memories</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+body{
+background:linear-gradient(180deg,#fdfaf6,#f3eee9);
+padding:40px 20px;
+text-align:center;
+overflow-x:hidden;
+}
+
+h1{
+font-family:'Playfair Display',serif;
+font-size:46px;
+margin-bottom:40px;
+color:#2d2d2d;
+}
+
+/* CAROUSEL */
+
+.carousel{
+width:100%;
+overflow:hidden;
+position:relative;
+}
+
+/* TRACK */
+
+.track{
+display:flex;
+gap:25px;
+width:max-content;
+animation:scroll 12s linear infinite;
+}
+
+/* IMAGES */
+
+.track img{
+height:280px;
+width:auto;
+border-radius:18px;
+object-fit:cover;
+box-shadow:0 12px 25px rgba(0,0,0,0.18);
+transition:0.4s;
+}
+
+.track img:hover{
+transform:scale(1.08);
+}
+
+/* PAUSE ON HOVER */
+
+.carousel:hover .track{
+animation-play-state:paused;
+}
+
+/* VIDEO */
+
+.video-box{
+margin:60px auto;
+background:white;
+padding:25px;
+border-radius:22px;
+box-shadow:0 12px 30px rgba(0,0,0,0.15);
+max-width:520px;
+}
+
+video{
+width:100%;
+border-radius:14px;
+}
+
+/* BACK BUTTON */
+
+.back{
+display:inline-block;
+margin-top:30px;
+padding:10px 22px;
+background:white;
+border-radius:30px;
+text-decoration:none;
+color:#555;
+box-shadow:0 10px 20px rgba(0,0,0,0.12);
+transition:0.3s;
+}
+
+.back:hover{
+transform:translateY(-3px);
+box-shadow:0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* INFINITE LOOP */
+
+@keyframes scroll{
+
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(-50%);
+}
+
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+.track img{
+height:220px;
+}
+
+h1{
+font-size:34px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Family ❤️</h1>
+
+<div class="carousel">
+
+<div class="track">
+
+<!-- ORIGINAL IMAGES -->
+
+<img src="fam/fam1.jpeg">
+<img src="fam/fam2.jpeg">
+<img src="fam/fam3.jpeg">
+<img src="fam/fam4.jpeg">
+<img src="fam/fam5.jpeg">
+<img src="fam/fam6.jpeg">
+
+<!-- DUPLICATE SET FOR LOOP -->
+
+<img src="fam/fam1.jpeg">
+<img src="fam/fam2.jpeg">
+<img src="fam/fam3.jpeg">
+<img src="fam/fam4.jpeg">
+<img src="fam/fam5.jpeg">
+<img src="fam/fam6.jpeg">
+
+</div>
+
+</div>
+
+<div class="video-box">
+
+<video controls>
+<source src="fam/nikkk.mp4" type="video/mp4">
+</video>
+
+</div>
+
+<a href="memories.html" class="back">← Back to memories</a>
+
+</body>
+</html>

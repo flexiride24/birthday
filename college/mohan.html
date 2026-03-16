@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohan Birthday Wish</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#fdfaf6;
+font-family:'Inter',sans-serif;
+text-align:center;
+padding:40px 20px;
+animation:fadePage 1s ease;
+}
+
+/* TITLE */
+
+h1{
+font-family:'Playfair Display',serif;
+font-size:42px;
+color:#3e3a39;
+margin-bottom:10px;
+}
+
+.subtitle{
+color:#7a7a7a;
+margin-bottom:40px;
+}
+
+/* POLAROID WALL */
+
+.wall{
+max-width:1000px;
+margin:auto;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:50px;
+}
+
+/* POLAROID CARD */
+
+.polaroid{
+background:white;
+padding:12px 12px 25px 12px;
+border-radius:6px;
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+transition:0.35s;
+}
+
+/* IMAGE STYLE */
+
+.polaroid img{
+height:230px;
+width:auto;
+border-radius:4px;
+display:block;
+object-fit:cover;
+}
+
+/* RANDOM ROTATIONS */
+
+.polaroid:nth-child(1){ transform:rotate(-5deg); }
+.polaroid:nth-child(2){ transform:rotate(4deg); }
+.polaroid:nth-child(3){ transform:rotate(-3deg); }
+.polaroid:nth-child(4){ transform:rotate(6deg); }
+.polaroid:nth-child(5){ transform:rotate(-4deg); }
+
+/* HOVER EFFECT */
+
+.polaroid:hover{
+transform:rotate(0deg) scale(1.08);
+box-shadow:0 18px 35px rgba(0,0,0,0.25);
+z-index:5;
+}
+
+/* MESSAGE CARD */
+
+.message-box{
+margin-top:60px;
+background:white;
+padding:30px;
+max-width:600px;
+margin-left:auto;
+margin-right:auto;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+.message-title{
+font-family:'Playfair Display',serif;
+font-size:26px;
+margin-bottom:15px;
+color:#3e3a39;
+}
+
+.message-text{
+color:#555;
+line-height:1.6;
+font-size:16px;
+}
+
+/* BACK BUTTON */
+
+.back{
+display:inline-block;
+margin-top:40px;
+padding:12px 25px;
+background:#4b4341;
+color:white;
+text-decoration:none;
+border-radius:25px;
+transition:0.3s;
+}
+
+.back:hover{
+background:#2f2a28;
+transform:scale(1.05);
+}
+
+/* ANIMATION */
+
+@keyframes fadePage{
+from{
+opacity:0;
+transform:translateY(25px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+h1{
+font-size:32px;
+}
+
+.polaroid img{
+height:180px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Mohan 💖</h1>
+<p class="subtitle">A special birthday wish for you</p>
+
+<h2>Memories 📸</h2>
+
+<div class="wall">
+
+<div class="polaroid"><img src="mohan/2.jpeg"></div>
+<div class="polaroid"><img src="mohan/3.jpeg"></div>
+<div class="polaroid"><img src="mohan/4.jpeg"></div>
+<div class="polaroid"><img src="mohan/5.jpeg"></div>
+<div class="polaroid"><img src="mohan/6.jpeg"></div>
+
+</div>
+
+<div class="message-box">
+
+<div class="message-title">A Little Message 💌</div>
+
+<p class="message-text">
+Some friendships are made of moments, laughter, and memories that stay forever.
+Today we celebrate you and all the good times we've shared.
+Wishing you happiness, success, and many more unforgettable memories ahead.
+Happy Birthday! 🎉
+</p>
+
+</div>
+
+<a class="back" href="../college.html">← Back to Friends</a>
+
+</body>
+</html>

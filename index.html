@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Birthday</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+background:#f5f5f5;
+font-family:'Inter',sans-serif;
+overflow-x:hidden;
+}
+
+/* intro screen */
+
+.intro{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.button{
+background:#b55c42;
+color:white;
+font-size:30px;
+padding:30px 80px;
+border-radius:60px;
+cursor:pointer;
+transition:.3s;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+.button:hover{
+transform:scale(1.05);
+}
+
+/* main page */
+
+.main{
+display:none;
+}
+
+/* hero */
+
+.hero{
+height:70vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+}
+
+.hero h1{
+font-family:'Playfair Display',serif;
+font-size:65px;
+color:#2d2d2d;
+animation:fadeUp 1.5s ease;
+}
+
+.subtitle{
+margin-top:15px;
+color:#888;
+font-size:16px;
+}
+
+/* gallery */
+
+.gallery{
+width:65%;
+margin:auto;
+margin-top:60px;
+
+column-count:3;
+column-gap:25px;
+}
+
+/* cards */
+
+.card{
+break-inside:avoid;
+margin-bottom:25px;
+
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+
+transform:translateY(40px);
+opacity:0;
+
+transition:all .8s ease;
+}
+
+.card.show{
+transform:translateY(0);
+opacity:1;
+}
+
+/* images */
+
+.card img{
+width:100%;
+height:auto;
+display:block;
+transition:.5s;
+}
+
+.card:hover img{
+transform:scale(1.05);
+}
+
+/* bottom button */
+
+.bottom{
+display:flex;
+justify-content:center;
+margin:80px 0;
+}
+
+.button1{
+background:#b55c42;
+color:white;
+font-size:26px;
+padding:22px 60px;
+border-radius:60px;
+cursor:pointer;
+transition:.3s;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+text-decoration:none;
+}
+
+.button1:hover{
+transform:scale(1.05);
+}
+
+/* animation */
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* responsive */
+
+@media(max-width:900px){
+
+.gallery{
+column-count:2;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+}
+
+@media(max-width:600px){
+
+.gallery{
+column-count:1;
+}
+
+}
+
+</style>
+</head>
+
+
+
+<body>
+
+<!-- FIRST CLICK BUTTON -->
+
+<div class="intro">
+
+<div class="button" onclick="startPage()">
+Click Me 🎁
+</div>
+
+</div>
+
+
+
+<!-- MAIN PAGE -->
+
+<div class="main">
+
+<div class="hero">
+
+<h1>Happy Birthday Nikhil🎉</h1>
+
+<p class="subtitle">
+A journey through your memories
+</p>
+
+</div>
+
+
+<div class="gallery">
+
+<div class="card"><img src="nikhil/1.jpeg"></div>
+<div class="card"><img src="nikhil/2.jpeg"></div>
+<div class="card"><img src="nikhil/3.jpeg"></div>
+
+<div class="card"><img src="nikhil/4.jpeg"></div>
+<div class="card"><img src="nikhil/5.jpeg"></div>
+<div class="card"><img src="nikhil/6.jpeg"></div>
+
+<div class="card"><img src="nikhil/7.jpeg"></div>
+<div class="card"><img src="nikhil/8.jpeg"></div>
+<div class="card"><img src="nikhil/9.jpeg"></div>
+
+<div class="card"><img src="nikhil/10.jpeg"></div>
+<div class="card"><img src="nikhil/11.jpeg"></div>
+<div class="card"><img src="nikhil/12.jpeg"></div>
+
+<div class="card"><img src="nikhil/13.jpeg"></div>
+
+</div>
+
+
+<!-- SECOND BUTTON -->
+
+<div class="bottom">
+
+<a href="memories.html" class="button1">
+Click Me 🎁
+</a>
+
+</div>
+
+</div>
+
+
+
+<script>
+
+/* intro button */
+
+function startPage(){
+
+document.querySelector(".intro").style.display="none"
+document.querySelector(".main").style.display="block"
+
+}
+
+/* scroll animation */
+
+const cards=document.querySelectorAll(".card")
+
+function reveal(){
+
+cards.forEach(card=>{
+
+const top=card.getBoundingClientRect().top
+const trigger=window.innerHeight-100
+
+if(top<trigger){
+card.classList.add("show")
+}
+
+})
+
+}
+
+window.addEventListener("scroll",reveal)
+
+</script>
+
+</body>
+</html>
