@@ -1,132 +1,211 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Manu Birthday Wish</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manoj Memories</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Inter:wght@300;400&display=swap"
+        rel="stylesheet">
 
-<style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+        body {
+            background: #f8f4e8;
+            font-family: 'Inter', sans-serif;
+            padding: 40px 20px;
+            text-align: center;
+        }
 
-body{
-background:#fdfaf6;
-font-family:'Inter',sans-serif;
-text-align:center;
-padding:40px;
-animation:fadePage 1s ease;
-}
+        /* TITLE */
 
-h1{
-font-family:'Playfair Display',serif;
-font-size:42px;
-color:#3e3a39;
-margin-bottom:10px;
-}
+        h1 {
+            font-family: 'Patrick Hand', cursive;
+            font-size: 48px;
+            margin-bottom: 10px;
+            color: #333;
+        }
 
-.subtitle{
-color:#7a7a7a;
-margin-bottom:30px;
-}
+        .subtitle {
+            color: #666;
+            margin-bottom: 40px;
+        }
 
-/* video section */
+        /* SCRAPBOOK */
 
-.video-box{
-margin-bottom:40px;
-}
+        .scrapbook {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 60px;
+        }
 
-video{
-width:500px;
-max-width:90%;
-border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,0.2);
-}
+        /* PHOTO */
 
-/* photo gallery */
+        .photo {
+            position: relative;
+            background: white;
+            padding: 10px;
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+            transition: .35s;
+        }
 
-.gallery{
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-margin-top:20px;
-}
+        .photo img {
+            height: 220px;
+            width: auto;
+            display: block;
+        }
 
-.gallery img{
-width:220px;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-transition:transform .4s ease;
-}
+        /* TAPE */
 
-.gallery img:hover{
-transform:scale(1.08);
-}
+        .photo::before {
+            content: "";
+            position: absolute;
+            width: 60px;
+            height: 18px;
+            background: rgba(255, 255, 200, 0.8);
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%) rotate(-4deg);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
 
-/* back button */
+        /* RANDOM ROTATION */
 
-.back{
-display:inline-block;
-margin-top:40px;
-padding:12px 25px;
-background:#4b4341;
-color:white;
-text-decoration:none;
-border-radius:25px;
-transition:0.3s;
-}
+        .photo:nth-child(1) {
+            transform: rotate(-6deg);
+        }
 
-.back:hover{
-background:#2f2a28;
-transform:scale(1.05);
-}
+        .photo:nth-child(2) {
+            transform: rotate(4deg);
+        }
 
-/* animation */
+        .photo:nth-child(3) {
+            transform: rotate(-3deg);
+        }
 
-@keyframes fadePage{
-from{
-opacity:0;
-transform:translateY(25px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
+        .photo:nth-child(4) {
+            transform: rotate(5deg);
+        }
 
-</style>
+        .photo:nth-child(5) {
+            transform: rotate(-4deg);
+        }
+
+        .photo:nth-child(6) {
+            transform: rotate(3deg);
+        }
+
+        .photo:nth-child(7) {
+            transform: rotate(-2deg);
+        }
+
+        /* HOVER */
+
+        .photo:hover {
+            transform: rotate(0deg) scale(1.1);
+            z-index: 5;
+        }
+
+        /* VIDEO */
+
+        .video {
+            margin-top: 70px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .video video {
+            width: 300px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* MESSAGE */
+
+        .message {
+            margin-top: 60px;
+            background: #fffdf5;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .message h2 {
+            font-family: 'Patrick Hand', cursive;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .message p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* BACK BUTTON */
+
+        .back {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 12px 25px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+        }
+
+        .back:hover {
+            background: black;
+        }
+    </style>
+
 </head>
 
 <body>
 
-<h1>Manu 💖</h1>
-<p class="subtitle">A special birthday wish for you</p>
+    <h1>Manoj 📒</h1>
+    <p class="subtitle">A friend who made Childhood unforgettable</p>
+
+    <div class="scrapbook">
+
+        <div class="photo"><img src="manoj/1.jpeg"></div>
+        <div class="photo"><img src="manoj/2.jpeg"></div>
+        <div class="photo"><img src="manoj/3.jpeg"></div>
+        <div class="photo"><img src="manoj/4.jpeg"></div>
+        <div class="photo"><img src="manoj/5.jpeg"></div>
+        <div class="photo"><img src="manoj/6.jpeg"></div>
+        <div class="photo"><img src="manoj/7.jpeg"></div>
+
+    </div>
+
+    <div class="video">
+
+        <h2 style="font-family:'Patrick Hand',cursive; margin-bottom:20px;">Birthday wish 🎬</h2>
+
+        <video controls>
+            <source src="manoj/video.mp4" type="video/mp4">
+        </video>
+
+    </div>
 
 
 
-<h2>We...📸</h2>
-
-<div class="gallery">
-
-<img src="photo1.jpg">
-<img src="photo2.jpg">
-<img src="photo3.jpg">
-
-</div>
-<div class="video-box">
-
-<video controls>
-<source src="wish.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-
-</div>
-<a class="back" href="../school.html">← Back to Friends</a>
+    <a class="back" href="../school.html">← Back to School Friends</a>
 
 </body>
+
 </html>

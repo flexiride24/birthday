@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Hima Birthday Wish</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hima & Birthday Memories</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
 
@@ -15,88 +16,121 @@ box-sizing:border-box;
 }
 
 body{
-background:#fdfaf6;
+background:#f8f4e8;
 font-family:'Inter',sans-serif;
+padding:40px 20px;
 text-align:center;
-padding:40px;
-animation:fadePage 1s ease;
 }
 
+/* TITLE */
+
 h1{
-font-family:'Playfair Display',serif;
-font-size:42px;
-color:#3e3a39;
+font-family:'Patrick Hand',cursive;
+font-size:48px;
 margin-bottom:10px;
+color:#333;
 }
 
 .subtitle{
-color:#7a7a7a;
-margin-bottom:30px;
-}
-
-/* video section */
-
-.video-box{
+color:#666;
 margin-bottom:40px;
 }
 
-video{
-width:500px;
-max-width:90%;
-border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,0.2);
-}
+/* SCRAPBOOK */
 
-/* photo gallery */
-
-.gallery{
+.scrapbook{
+max-width:1100px;
+margin:auto;
 display:flex;
-justify-content:center;
-gap:20px;
 flex-wrap:wrap;
-margin-top:20px;
+justify-content:center;
+gap:60px;
 }
 
-.gallery img{
-width:220px;
+/* PHOTO */
+
+.photo{
+position:relative;
+background:white;
+padding:10px;
+box-shadow:0 8px 18px rgba(0,0,0,0.2);
+transition:.35s;
+}
+
+.photo img{
+height:220px;
+width:auto;
+display:block;
+}
+
+/* TAPE */
+
+.photo::before{
+content:"";
+position:absolute;
+width:60px;
+height:18px;
+background:rgba(255,255,200,0.8);
+top:-10px;
+left:50%;
+transform:translateX(-50%) rotate(-4deg);
+box-shadow:0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* RANDOM ROTATION */
+
+.photo:nth-child(1){ transform:rotate(-6deg); }
+.photo:nth-child(2){ transform:rotate(4deg); }
+.photo:nth-child(3){ transform:rotate(-3deg); }
+.photo:nth-child(4){ transform:rotate(5deg); }
+.photo:nth-child(5){ transform:rotate(-4deg); }
+.photo:nth-child(6){ transform:rotate(3deg); }
+
+/* HOVER */
+
+.photo:hover{
+transform:rotate(0deg) scale(1.1);
+z-index:5;
+}
+
+/* MESSAGE */
+
+.message{
+margin-top:60px;
+background:#fffdf5;
+padding:30px;
 border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-transition:transform .4s ease;
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+max-width:650px;
+margin-left:auto;
+margin-right:auto;
 }
 
-.gallery img:hover{
-transform:scale(1.08);
+.message h2{
+font-family:'Patrick Hand',cursive;
+font-size:30px;
+margin-bottom:10px;
 }
 
-/* back button */
+.message p{
+color:#555;
+line-height:1.7;
+}
+
+/* BACK BUTTON */
 
 .back{
 display:inline-block;
 margin-top:40px;
 padding:12px 25px;
-background:#4b4341;
+background:#333;
 color:white;
 text-decoration:none;
 border-radius:25px;
-transition:0.3s;
 }
 
 .back:hover{
-background:#2f2a28;
-transform:scale(1.05);
-}
-
-/* animation */
-
-@keyframes fadePage{
-from{
-opacity:0;
-transform:translateY(25px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
+background:black;
 }
 
 </style>
@@ -104,29 +138,36 @@ transform:translateY(0);
 
 <body>
 
-<h1>Hima 💖</h1>
-<p class="subtitle">A special birthday wish for you</p>
+<h1>Hima 📒</h1>
 
+<div class="scrapbook">
 
-
-<h2>We...📸</h2>
-
-<div class="gallery">
-
-<img src="photo1.jpg">
-<img src="photo2.jpg">
-<img src="photo3.jpg">
+<div class="photo"><img src="hima/1.jpeg"></div>
+<div class="photo"><img src="hima/2.jpeg"></div>
+<div class="photo"><img src="hima/3.jpeg"></div>
+<div class="photo"><img src="hima/4.jpeg"></div>
+<div class="photo"><img src="hima/5.jpeg"></div>
+<div class="photo"><img src="hima/6.jpeg"></div>
 
 </div>
-<div class="video-box">
 
-<video controls>
-<source src="wish.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
+<div class="message">
+
+<h2>Childhood Memories Together 🎉</h2>
+
+<p>
+From the very first day we met, you’ve been more than just a friend — you’ve been a partner in every adventure.
+From sharing snacks, playing until our legs ached, getting into silly fights, to laughing over things only we could understand… every moment with you has been unforgettable.
+
+Watching you grow from a mischievous kid to the amazing person you are today has been a privilege.
+Thank you for being there through all the small joys and crazy moments of our childhood.
+
+Happy Birthday, my friend! Here’s to all the memories we’ve made and the countless more still waiting for us.
+</p>
 
 </div>
-<a class="back" href="../school.html">← Back to Friends</a>
+
+<a class="back" href="../school.html">← Back to School Friends</a>
 
 </body>
 </html>
